@@ -1,0 +1,56 @@
+CREATE TABLE Заказ(
+	[ID] [int] PRIMARY KEY IDENTITY(1,1) NOT NULL,
+	[Фамилия] [char](30) NULL,
+	[Имя] [char](30) NULL,
+	[Телефон] [char](20) NULL,
+	[Адрес] [varchar](256) NULL,
+	[Цена] [int] NULL,
+	[Оплата] [char](64) NULL
+)
+
+CREATE TABLE Корзина(
+	[ID] [int] PRIMARY KEY IDENTITY(1,1) NOT NULL,
+	[Категория] [char](64) NULL,
+	[Производитель] [char](64) NULL,
+	[Страна] [char](20) NULL,
+	[Цена] [int] NULL,
+	[Гарантия] [char](20) NULL,
+)
+
+CREATE TABLE Товары(
+	[ID] [int] PRIMARY KEY IDENTITY(1,1) NOT NULL,
+	[Категория] [char](64) NULL,
+	[Производитель] [char](64) NULL,
+	[Страна] [char](20) NULL,
+	[Цена] [int] NULL,
+	[Гарантия] [char](20) NULL,
+)
+
+ALTER TABLE Товары
+ADD Наименование Char(40)
+
+ALTER TABLE Корзина
+ADD Наименование Char(40)
+
+
+
+
+CREATE TABLE Доставка(
+	[ID] [int] PRIMARY KEY IDENTITY(1,1) NOT NULL,
+	[Фамилия] [char](30) NULL,
+	[Имя] [char](30) NULL,
+	[Телефон] [char](20) NULL,
+	[Адрес] [varchar](256) NULL,
+	[Цена] [int] NULL,
+	[Оплата] [char](64) NULL,
+)
+
+CREATE TABLE Мои_Заказы(
+[ID] [int] PRIMARY KEY IDENTITY(1,1) NOT NULL,
+	[Фамилия] [char](30) NULL,
+	[Имя] [char](30) NULL,
+	[Телефон] [char](20) NULL,
+	[Адрес] [varchar](256) NULL,
+	[Цена] [int] NULL,
+	[Оплата] [char](64) NULL
+)
